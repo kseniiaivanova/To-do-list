@@ -1,3 +1,4 @@
+//skapa en class för alla object
 class Todo {
   constructor(id, content, done) {
     this.id = id;
@@ -6,6 +7,7 @@ class Todo {
   }
 }
 
+//skapa tre hårdkodade object
 let todoOne = new Todo(Date.now(), "Buy plane tickets", false);
 
 let todoTwo = new Todo(Date.now(), "Book a hotel", false);
@@ -14,36 +16,54 @@ let todoThree = new Todo(Date.now(), "Pack my things", false);
 
 let todos = [todoOne, todoTwo, todoThree];
 
+//hitta input button och lägga till event
 let addButton = document.getElementById("mybtn");
 addButton.addEventListener("click", function () {
   let inputField = document.getElementById("myinput");
   let inputText = inputField.value;
-  let userInput = new Todo(Date.now(), inputText, false);
 
-  if (inputText !== " ") {
+  //skapa variabel för nytt object och stoppa in content från användaren
+  let userInput = new Todo(Date.now(), inputText, false);
+  //kolla om inputruta inte är tom
+  if (inputText.length == "0") {
+    alert("Please, enter a task!");
+  } else {
     todos.push(userInput);
+
+    //rensa inputen
+    inputField.value = "";
 
     displayTodos();
   }
 });
 
+//skapa header
+let container = document.getElementById("head");
+let header = document.createElement("h1");
+header.innerText = "Things to do before your flight";
+container.appendChild(header);
+
 function displayTodos() {
   let myList = document.getElementById("myList");
+  //rensa innehållet
   myList.innerHTML = "";
-
+  //loopa listan av todos och declarerar variabler för HTML taggar
   for (let i = 0; i < todos.length; i++) {
     let item = document.createElement("li");
     let check = document.createElement("input");
     let todoText = document.createElement("span");
+    todoText.className = "myspan";
+
     check.setAttribute("type", "checkbox");
+    check.className = "cbox";
 
     item.className = "li";
-    //check.innerHTML = "Test";
-
+    //ändrar klass på punkt i listan, adderar tick mark till checkbox
     if (todos[i].done) {
       item.classList.add("checked");
+      check.setAttribute("checked", true);
     }
-
+    //lägga event på checkbox, togglar boolean värde på egenskap "done"
     check.addEventListener("click", () => {
       if (todos[i].done === false) {
         todos[i].done = true;
@@ -53,11 +73,15 @@ function displayTodos() {
       displayTodos();
     });
 
+    //skapar HTML taggar input checkbox, li, span,
+
     item.appendChild(check);
     item.appendChild(todoText);
     myList.appendChild(item);
 
+    //skriver ut todos i span tag på skärmen
     todoText.innerHTML += todos[i].content;
   }
 }
+
 displayTodos();

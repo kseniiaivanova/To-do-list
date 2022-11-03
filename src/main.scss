@@ -1,37 +1,57 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@700&display=swap');
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Titillium Web', sans-serif;
     background-color: aquamarine;
     display: flex;
     justify-items: center;
+    height: 100vh;
+    
 }
 
 
 .wrapper {
-    width: 400px;
+    width: 50%;
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
     margin: auto;
+    padding: 2em;
+    
 }
 
 h1 {
     color: rgb(4, 80, 49);
+    padding: 0.5em;
 }
 
 header {
     display:flex;
     justify-content: space-between;
-}
+} 
 
 .usinput {
     height: 40px;
+    margin-bottom: 2em;
+    
+    
+}
+
+.usinput:focus {
+    background: rgb(172, 247, 189);
+    outline: none;
 }
 
 .inputbtn {
     
+    height: 40px;
     width: 40px;
     background: rgb(4, 141, 84);
     display: flex;
@@ -43,14 +63,33 @@ header {
 }
 
 
-
-.li {
-    padding: 1em;
-    background-color: aqua;
-    list-style: none;
+.inputbtn:hover{
+    background: rgb(3, 57, 34);
     
 }
 
+.list {
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.4);
+}
+
+
+.li {
+    padding: 1em;
+    background-color: whitesmoke;
+    list-style: none;
+    border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    
+    
+}
+
+
+
 .checked {
     text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.myspan {
+    margin: 1em;
 }
