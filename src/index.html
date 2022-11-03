@@ -9,8 +9,20 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <ul id="myList">
-      
-    </ul>
+    <div class="wrapper">
+      <h1>ToDo list</h1>
+      <header>
+        <input
+          id="myinput"
+          class="usinput"
+          type="text"
+          placeholder="New Todo"
+        />
+        <button class="inputbtn" id="mybtn">Add</button>
+      </header>
+      <section>
+        <ul id="myList" class="list"></ul>
+      </section>
+    </div>
   </body>
 </html>

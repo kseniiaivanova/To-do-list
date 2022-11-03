@@ -1,9 +1,54 @@
-li {
-    list-style: none;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aquamarine;
+    display: flex;
+    justify-items: center;
 }
+
+
+.wrapper {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+h1 {
+    color: rgb(4, 80, 49);
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+}
+
+.usinput {
+    height: 40px;
+}
+
+.inputbtn {
+    
+    width: 40px;
+    background: rgb(4, 141, 84);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    border: none;
+    color: white;
+}
+
+
 
 .li {
     padding: 1em;
+    background-color: aqua;
+    list-style: none;
+    
 }
 
 .checked {
