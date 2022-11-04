@@ -41,13 +41,15 @@ header {
     height: 40px;
     margin-bottom: 2em;
     
-    
+    &:focus {
+        cursor: pointer;
+        background: rgb(172, 247, 189);
+         outline: none;
+        
+    }
+        
 }
 
-.usinput:focus {
-    background: rgb(172, 247, 189);
-    outline: none;
-}
 
 .inputbtn {
     
@@ -60,29 +62,34 @@ header {
     font-size: 1em;
     border: none;
     color: white;
-}
 
-
-.inputbtn:hover{
-    background: rgb(3, 57, 34);
+    &:hover {
+        cursor: pointer;
+        background: rgb(3, 57, 34);
+    }
+        
+        
     
 }
 
+
+
+
 .list {
     box-shadow: 0 0 3em rgba(0, 0, 0, 0.4);
-}
 
+    & li {
 
-.li {
     padding: 1em;
     background-color: whitesmoke;
     list-style: none;
     border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
     display: flex;
-    
-    
-    
+    }
 }
+
+
+
 
 .cbox {
     cursor: pointer;
