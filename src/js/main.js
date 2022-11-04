@@ -2,7 +2,6 @@ import { Todo } from "./models/todo";
 
 window.onload = function () {
   getListFromStorage();
-  console.log("hej!");
 };
 //skapa tre hårdkodade object
 /* let todoOne = new Todo(Date.now(), "Buy plane tickets", false);
