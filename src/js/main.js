@@ -1,13 +1,19 @@
 import { Todo } from "./models/todo";
 
+window.onload = function () {
+  getListFromStorage();
+  console.log("hej!");
+};
 //skapa tre hårdkodade object
-let todoOne = new Todo(Date.now(), "Buy plane tickets", false);
+/* let todoOne = new Todo(Date.now(), "Buy plane tickets", false);
 
 let todoTwo = new Todo(Date.now(), "Book a hotel", false);
 
-let todoThree = new Todo(Date.now(), "Pack my things", false);
+let todoThree = new Todo(Date.now(), "Pack my things", false); */
 
-let todos = [todoOne, todoTwo, todoThree];
+let todos = [
+  /* todoOne, todoTwo, todoThree */
+];
 
 //hitta input button och lägga till event
 let addButton = document.getElementById("mybtn");
@@ -74,7 +80,24 @@ function displayTodos() {
 
     //skriver ut todos i span tag på skärmen
     todoText.innerHTML += todos[i].content;
+
+    //skickar listan av todos till LS
+    localStorage.setItem("storageList", JSON.stringify(todos));
   }
 }
 
 displayTodos();
+
+//hämtar listan från LS, göra om sträng till objekt, skapa nya objekten, pusha i todos och visa på skärmen
+function getListFromStorage() {
+  let storageList = JSON.parse(localStorage.getItem("storageList"));
+  for (let i = 0; i < storageList.length; i++) {
+    let newItem = new Todo(
+      storageList[i].id,
+      storageList[i].content,
+      storageList[i].done
+    );
+    todos.push(newItem);
+  }
+  displayTodos();
+}
