@@ -81,9 +81,12 @@ header {
     display: flex;
     
     
+    
 }
 
-
+.cbox {
+    cursor: pointer;
+}
 
 .checked {
     text-decoration: line-through;

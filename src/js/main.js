@@ -1,11 +1,4 @@
-//skapa en class för alla object
-class Todo {
-  constructor(id, content, done) {
-    this.id = id;
-    this.content = content;
-    this.done = done;
-  }
-}
+import { Todo } from "./models/todo";
 
 //skapa tre hårdkodade object
 let todoOne = new Todo(Date.now(), "Buy plane tickets", false);
