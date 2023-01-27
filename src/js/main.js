@@ -38,7 +38,7 @@ addButton.addEventListener("click", function () {
 //skapa header
 let container = document.getElementById("head");
 let header = document.createElement("h1");
-header.innerText = "Things to do before your flight";
+header.innerText = "CheckIt ToDo list";
 container.appendChild(header);
 
 function displayTodos() {
