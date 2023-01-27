@@ -9,22 +9,24 @@
     <script src="js/main.js" defer type="module"></script>
   </head>
   <body>
-    <div id="mywrap" class="wrapper">
-      <div id="head">
-        <!-- <h1>ToDo list</h1> -->
+    <div class="back">
+      <div id="mywrap" class="wrapper">
+        <div id="head">
+          <!-- <h1>ToDo list</h1> -->
+        </div>
+        <header>
+          <input
+            id="myinput"
+            class="usinput"
+            type="text"
+            placeholder="New Todo"
+          />
+          <button class="inputbtn" id="mybtn">Add</button>
+        </header>
+        <section>
+          <ul id="myList" class="list"></ul>
+        </section>
       </div>
-      <header>
-        <input
-          id="myinput"
-          class="usinput"
-          type="text"
-          placeholder="New Todo"
-        />
-        <button class="inputbtn" id="mybtn">Add</button>
-      </header>
-      <section>
-        <ul id="myList" class="list"></ul>
-      </section>
     </div>
   </body>
 </html>
