@@ -1,6 +1,14 @@
 {
+  "homepage": ".",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.7.0"
+  },
+  "scripts": {
+    "start": "npx parcel src/index.html",
+    "build": "parcel build src/index.html src/pages/checkout.html src/pages/products.html --public-url https://kseniiaivanova.github.io/HolidayTree/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
