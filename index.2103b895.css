@@ -1,0 +1,129 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@500&family=Titillium+Web:wght@700&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #f6f3f3;
+  flex-direction: column;
+  justify-items: center;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+}
+
+header {
+  width: 100%;
+  background-color: #b7d1ee;
+  justify-content: center;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+header h1, header .bi bi-check2-square {
+  color: #140450;
+  padding: .5em;
+  font-size: 3em;
+}
+
+.back {
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.wrapper {
+  background-color: #fff;
+  flex-direction: column;
+  place-items: center;
+  margin: auto;
+  padding: 2em;
+  display: flex;
+}
+
+form {
+  justify-content: space-between;
+  display: flex;
+}
+
+.usinput {
+  height: 50px;
+  border: 2px solid #0003;
+  margin-bottom: 2em;
+  font-family: Montserrat;
+  font-size: 1.2em;
+}
+
+.usinput:focus {
+  cursor: pointer;
+  background: #d3d9fb;
+  outline: none;
+}
+
+.inputbtn {
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  background: #2a09a1;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  display: flex;
+}
+
+.inputbtn:hover {
+  cursor: pointer;
+  background: #5021f7;
+}
+
+.list li {
+  background-color: #fffdfd;
+  border: .1em solid #0003;
+  border-bottom: none;
+  padding: 1em;
+  list-style: none;
+  display: flex;
+}
+
+.list li:last-child {
+  border-bottom: .1em solid #0003;
+}
+
+.cbox {
+  cursor: pointer;
+}
+
+.checked {
+  opacity: .8;
+  text-decoration: line-through red;
+}
+
+.myspan {
+  margin: 1em;
+}
+
+.clearbtn {
+  height: 50px;
+  width: 100px;
+  color: #fff;
+  background: #2a09a1;
+  border: none;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  font-size: 1.5em;
+  display: flex;
+}
+
+.clearbtn:hover {
+  cursor: pointer;
+  background: #5021f7;
+}
+
+/*# sourceMappingURL=index.2103b895.css.map */
